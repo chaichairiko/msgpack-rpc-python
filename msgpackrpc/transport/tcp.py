@@ -94,7 +94,7 @@ class ClientTransport(object):
             sock.send_message(message, callback)
 
     def connect(self):
-        stream = IOStream(self._address.socket(), io_loop=self._session._loop._ioloop)
+        stream = IOStream(self._address.socket())
         socket = ClientSocket(stream, self, self._encodings)
         socket.connect();
 
