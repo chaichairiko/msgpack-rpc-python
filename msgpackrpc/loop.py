@@ -35,7 +35,7 @@ class Loop(object):
         if self._periodic_callback is not None:
             self.dettach_periodic_callback()
 
-        self._periodic_callback = ioloop.PeriodicCallback(callback, callback_time, self._ioloop)
+        self._periodic_callback = ioloop.PeriodicCallback(callback, callback_time)
         self._periodic_callback.start()
 
     def dettach_periodic_callback(self):
